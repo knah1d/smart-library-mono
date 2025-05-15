@@ -31,7 +31,7 @@ const validateBookUpdate = [
 router.post('/', validateNewBook, createBook);
 router.get('/', getBooks);
 router.get('/:id', getBookById);
-router.put('/:id', validateBookUpdate, updateBook);
+router.patch('/:id', validateBookUpdate, updateBook);
 router.delete('/:id', deleteBook);
 
 export default router; 
