@@ -1,6 +1,6 @@
 import express from 'express';
 import { body } from 'express-validator';
-import { createUser, getUserById, updateUser } from '../controllers/userController.js';
+import { createUser, getUserByEmail, getUserById, updateUser } from '../controllers/userController.js';
 
 const router = express.Router();
 
@@ -14,6 +14,7 @@ const validateUser = [
 // Routes
 router.post('/', validateUser, createUser);
 router.get('/:id', getUserById);
+router.get('/', getUserByEmail);
 router.patch('/:id', validateUser, updateUser);
 
 export default router; 

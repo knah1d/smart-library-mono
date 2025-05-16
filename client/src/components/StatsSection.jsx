@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { statsAPI } from '../services/api';
+import { statsAPI } from '../services/stat-api.js';
 
 const StatsSection = () => {
   const [systemOverview, setSystemOverview] = useState(null);
