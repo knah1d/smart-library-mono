@@ -25,5 +25,15 @@ export const userAPI = {
       console.error('Error fetching user:', error);
       throw error;
     }
+  },
+  
+  getUserByEmail: async (email) => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/users?email=${encodeURIComponent(email)}`);
+      return await response.json();
+    } catch (error) {
+      console.error('Error fetching user by email:', error);
+      throw error;
+    }
   }
 };
